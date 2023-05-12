@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>siema</h1>
+    <?php include 'header.php'; ?>
 </body>
 </html>
