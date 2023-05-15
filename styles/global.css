@@ -38,13 +38,29 @@ a {
   color: inherit;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+h2 a {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.buttons a {
+  position: relative;
 }
 
 a span {
-  font-size: 25px;
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  top: 8px;
+  right: 35px;
+  font-weight: lighter;
   position: absolute;
-  color: red;
-  top: 80%;
+}
+
+a:hover span {
+  transform: translateX(40%);
 }
 
 body::before,

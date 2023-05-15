@@ -12,21 +12,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="nav">
-        <h2>Serwis KSMG</h2>
-        <div class="menu">
-            <a href="http://localhost:8080/serwis-komputerowy/routes/about.php">About us</a>
-            <a href="http://localhost:8080/serwis-komputerowy/routes/contact.php">Contact us</a>
-            <a href="http://localhost:8080/serwis-komputerowy/routes/register.php">Register</a>
-            <a href="http://localhost:8080/serwis-komputerowy/routes/login.php">Login</a>
-        </div>
-    </div>
+    <?php include 'header.php' ?>
     <div class="hero">
         <div class="hero-text">
             <h1>Najlepszy Serwis Komputerowy</h1>
             <p>Sprawdź naszą ofertę</p>
             <div class="buttons">
-                <a class="button primary">Get Started <span>&gt;</span></a>
+                <a href="http://localhost:8080/serwis-komputerowy/routes/login.php" class="button primary">Get Started <span>&gt;</span></a>
             </div>
         </div>
         <div class="blob-cont">
