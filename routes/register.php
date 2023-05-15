@@ -14,20 +14,38 @@
 </head>
 <body>
     <?php include '../header.php' ?>
-    <div style="margin-bottom: 4em" class="hero">
-        <h2>Create User</h2>
-        <form method="POST" action="register.php">
-            <label for="username">Username:</label>
-            <input type="text" name="username" required><br><br>
+    <div style="margin-bottom: 4em; flex-direction: column; justify-content: center" class="hero">
+        <div class="container">
+            <h2>Create User</h2>
+            <form method="POST" action="register.php">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required><br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" required><br><br>
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required><br><br>
 
-            <input type="submit" value="Create User">
-        </form>
+                <input type="submit" value="Create User">
+            </form>
+        </div>
     </div>
+    <?php
+        if (isset($_POST['username'])) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+
+            $connection = mysqli_connect('127.0.0.1', 'root', '', 'serwis');
+            $query = "INSERT INTO user VALUES (NULL, '$username', '$email', '$password')";
+            $request = mysqli_query($connection, $query);
+
+            if ($request) {
+                echo "<script>alert('Użytkownik zarejestrowany')</script>";
+            }
+        }
+    ?>
+
 </body>
 </html>

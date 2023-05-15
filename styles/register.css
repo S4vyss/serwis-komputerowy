@@ -1,0 +1,14 @@
+:root {
+    --bg: white;
+    --text: #151515;
+    --cyan: #C1EED8;
+    --dark-blue: #A7B9F1;
+    --light-blue: #1DEB88;
+}
+
+.container {
+    background: white;
+    width: 500px;
+    height: 400px;
+}
+
