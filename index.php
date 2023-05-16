@@ -18,7 +18,15 @@
             <h1>Najlepszy Serwis Komputerowy</h1>
             <p>Sprawdź naszą ofertę</p>
             <div class="buttons">
-                <a href="http://localhost:8080/serwis-komputerowy/routes/login.php" class="button primary">Get Started <span>&gt;</span></a>
+                <?php
+                    if (isset($_SESSION['isLogged'])) {
+                        if ($_SESSION['isLogged']) {
+                            echo '<a href="#" onclick="logged();" class="button primary">Get Started <span>&gt;</span></a>';
+                        }
+                    } else {
+                        echo '<a href="http://localhost:8080/serwis-komputerowy/routes/login.php" class="button primary">Get Started <span>&gt;</span></a>';
+                    }
+                ?>
             </div>
         </div>
         <div class="blob-cont">
@@ -43,5 +51,11 @@
         <div class="red2 blob2"></div>
         <div class="green2 blob2"></div>
     </div>
+
+    <script>
+        function logged() {
+            return alert("You are logged already");
+        }
+    </script>
 </body>
 </html>
