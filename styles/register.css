@@ -9,6 +9,50 @@
 .container {
     background: white;
     width: 500px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 9px;
+}
+
+.login {
     height: 400px;
+}
+
+.container h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 1em;
+}
+
+form input {
+    padding: 0.25rem 0.75rem;
+    height: 2.25rem;
+    max-height: 10rem;
+    color: rgb(41, 41, 41);
+    font-size: 0.8125rem;
+    border-radius: 0.375rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    opacity: 1;
+}
+
+form .submit {
+    background: #1DEB88;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form .submit:hover {
+    background: #13da7a;
 }
 

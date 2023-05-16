@@ -8,7 +8,7 @@
 
 
 body {
-  height: 100vh;
+  height: 400vh;
   margin: 0;
 
   display: flex;
@@ -94,6 +94,58 @@ body::before {
   right: 5em;
 }
 
+.yellow2 {
+  background-color: #E2F4ED;
+  filter: brightness(80%);
+  position: absolute;
+  top: 200px;
+  left: 80px;
+  height: 600px;
+  width: 300px;
+
+  animation: blob 6s infinite ease;
+}
+
+.green2 {
+  background-color: var(--dark-blue);
+  position: absolute;
+  top: 80px;
+  right: -80px;
+  height: 500px;
+  width: 350px;
+
+  animation: blob 8s infinite ease;
+}
+
+.red2 {
+  background-color: var(--cyan);
+  position: absolute;
+  top: -100px;
+  right: 0;
+  height: 250px;
+  width: 200px;
+
+  animation: blob 10s infinite ease;
+}
+
+@keyframes blob {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.40;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blob2 {
+  filter: blur(80px);
+}
 
 .blob {
   border-radius: 100px;
@@ -178,7 +230,7 @@ body::before {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 130%;
+  height: 80vh;
   gap: 3em;
   background:
           linear-gradient(to right, #151515 1px, transparent 1px) 0 0,

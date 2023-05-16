@@ -19,31 +19,32 @@
             <h2>Create User</h2>
             <form method="POST" action="register.php">
                 <label for="username">Username:</label>
-                <input type="text" name="username" required><br><br>
-
+                <input type="text" name="username" required>
                 <label for="email">Email:</label>
-                <input type="email" name="email" required><br><br>
-
+                <input type="email" name="email" required>
                 <label for="password">Password:</label>
-                <input type="password" name="password" required><br><br>
-
-                <input type="submit" value="Create User">
+                <input type="password" name="password" required>
+                <input type="submit" class="submit" value="Create User">
             </form>
         </div>
     </div>
     <?php
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
-            $password = $_POST['password'];
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $email = $_POST['email'];
 
-            $connection = mysqli_connect('127.0.0.1', 'root', '', 'serwis');
+            $connection = mysqli_connect('127.0.0.1', 'root', '', 'serwis') or die;
             $query = "INSERT INTO user VALUES (NULL, '$username', '$email', '$password')";
             $request = mysqli_query($connection, $query);
 
             if ($request) {
-                echo "<script>alert('Użytkownik zarejestrowany')</script>";
+                echo "<script>
+                         alert('Użytkownik zarejestrowany');
+                         window.location.href = 'http://localhost:8080/serwis-komputerowy/routes/login.php';
+                      </script>";
             }
+            $connection->close();
         }
     ?>
 

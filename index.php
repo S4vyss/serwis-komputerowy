@@ -38,5 +38,10 @@
             <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
         </filter>
     </svg>
+    <div style="position: absolute; z-index: -2; left: 15%; top: 30%; transform: rotate(-45deg)">
+        <div class="yellow2 blob2"></div>
+        <div class="red2 blob2"></div>
+        <div class="green2 blob2"></div>
+    </div>
 </body>
 </html>
