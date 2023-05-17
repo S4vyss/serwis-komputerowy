@@ -3,7 +3,7 @@
   --text: #151515;
   --cyan: #C1EED8;
   --dark-blue: #A7B9F1;
-  --light-blue: #1DEB88;
+  --light-blue: #2beb1d;
 }
 
 
@@ -70,7 +70,7 @@ body::after {
   top: 0;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 400vh;
   z-index: -1;
 
   opacity: 40%;
