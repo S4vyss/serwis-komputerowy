@@ -1,0 +1,90 @@
+.contact {
+    height: 100vh;
+}
+
+.contact::after, .contact::before {
+    height: 100vh!important;
+}
+
+.container-contact {
+    width: 100%;
+    height: 70vh;
+    background: white;
+    border-radius: 19px;
+}
+
+.contact-info h2 {
+    color: #2F3D7E;
+    margin: 0;
+}
+
+.contact-info p {
+    color: #101820;
+}
+
+.left-contact {
+    background: #f8e8e6;
+    width: 30%;
+    height: calc(70vh - 10px - 5em);
+    border-radius: 19px;
+    margin: 5px;
+    padding: 2.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+.big-circle, .small-circle {
+    position: absolute;
+    border-radius: 100%;
+}
+
+.big-circle {
+    background: #2F3D7E;
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -150px;
+}
+
+.small-circle {
+    background: rgb(230, 248, 239, 0.9);
+    width: 150px;
+    height: 150px;
+    right: 120px;
+    bottom: 120px;
+    z-index: 100;
+}
+
+.icon {
+    display: flex;
+    gap: 1em;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 83%;
+}
+
+.links {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    gap: 1em;
+}
+
+.links a {
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #E6F8EF;
+}
