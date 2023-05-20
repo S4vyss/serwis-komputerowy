@@ -11,6 +11,11 @@
     height: 70vh;
     background: white;
     border-radius: 19px;
+    display: flex;
+}
+
+.contact-info {
+    width: 35%;
 }
 
 .contact-info h2 {
@@ -24,7 +29,7 @@
 
 .left-contact {
     background: #f8e8e6;
-    width: 30%;
+    max-width: 100%;
     height: calc(70vh - 10px - 5em);
     border-radius: 19px;
     margin: 5px;
@@ -87,4 +92,83 @@
 
 .links a:hover {
     background-color: #E6F8EF;
+}
+
+.form-contact {
+    width: 65%;
+    height: 70vh;
+}
+
+.field {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+.field-email {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding: 2em 3em;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.input-text {
+    display: flex;
+    flex-direction: column;
+    width: 91%;
+}
+
+.input-div input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 10px;
+}
+
+textarea {
+    padding: 1em;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.submit {
+    width: 91%;
+    padding-left: 3em;
+    height: 25.7vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+    overflow: hidden;
+    position: relative;
+}
+
+.submit-btn {
+    padding: 1.5em 2.5em;
+    border: none;
+    background-color: #2F3D7E;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: -5px 11px 13px -7px rgba(47, 61, 126, 1);
+    font-size: medium;
+}
+
+.submit-btn:hover {
+    background-color: #f8e8e6;
+    color: #2F3D7E;
 }
