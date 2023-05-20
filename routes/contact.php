@@ -86,16 +86,21 @@
                 <input class="submit-btn" type="submit" value="Send Message" />
             </div>
         </form>
-        <div style='position: absolute; z-index: -2; left: 15%; top: {$top}%; transform: rotate(-45deg)'>
-            <div class='yellow2 blob2'></div>
-            <div class='red2 blob2'></div>
-            <div class='green2 blob2'></div>
-        </div>
-        <div style='position: absolute; z-index: -2; right: 15%; top: ${top}%; transform: rotate(45deg)'>
-            <div class='yellow2 blob2'></div>
-            <div class='red2 blob2'></div>
-            <div class='green2 blob2'></div>
-        </div>
+        <?php
+            $top = 30;
+            echo "
+                <div style='position: absolute; z-index: -2; left: 15%; top: {$top}%; transform: rotate(-45deg)'>
+                    <div class='yellow2 blob2'></div>
+                    <div class='red2 blob2'></div>
+                    <div class='green2 blob2'></div>
+                </div>
+                <div style='position: absolute; z-index: -2; right: 15%; top: {$top}%; transform: rotate(45deg)'>
+                    <div class='yellow2 blob2'></div>
+                    <div class='red2 blob2'></div>
+                    <div class='green2 blob2'></div>
+                </div>
+            ";
+        ?>
     </main>
     <?php
         if (isset($_POST['name'])) {

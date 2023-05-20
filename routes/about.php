@@ -39,7 +39,7 @@
                             <div class='red2 blob2'></div>
                             <div class='green2 blob2'></div>
                         </div>
-                        <div style='position: absolute; z-index: -2; right: 15%; top: ${top}%; transform: rotate(45deg)'>
+                        <div style='position: absolute; z-index: -2; right: 15%; top: {$top}%; transform: rotate(45deg)'>
                             <div class='yellow2 blob2'></div>
                             <div class='red2 blob2'></div>
                             <div class='green2 blob2'></div>
