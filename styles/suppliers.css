@@ -1,0 +1,78 @@
+.supplies {
+    width: 75%;
+    height: 40vh;
+}
+
+.arrows {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.arrows svg {
+    cursor: pointer;
+}
+
+.scroll {
+    height: 100%;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    cursor: grab;
+    gap: 1rem;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none; /* Hide the scroll bar */
+}
+
+.supplier {
+    min-width: 45%;
+    height: 70%;
+    background: white;
+    border-radius: 9px;
+    list-style: none;
+}
+
+.icon-supply {
+    width: 55px;
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    margin-top: 2rem;
+}
+
+.location {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.phone {
+    font-weight: 500;
+    color: #969696;
+}
+
+.desc-supplies {
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.outer {
+    overflow: auto;
+    white-space: normal;
+    width: fit-content;
+    font-size: larger;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}

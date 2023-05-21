@@ -1,9 +1,9 @@
 :root {
-  --bg: white;
+  --bg: #F8F9FB;
   --text: #151515;
-  --cyan: #C1EED8;
+  --cyan: #c1eaee;
   --dark-blue: #A7B9F1;
-  --light-blue: #2beb1d;
+  --light-blue: #2ACDFD;
 }
 
 
@@ -61,24 +61,6 @@ a span {
 
 a:hover span {
   transform: translateX(40%);
-}
-
-body::before,
-body::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: '';
-  width: 100%;
-  height: fit-content;
-  z-index: -1;
-
-  opacity: 40%;
-}
-
-body::before {
-  background: var(--cyan);
-  filter: url(#noiseFilter);
 }
 
 /* Blobs */

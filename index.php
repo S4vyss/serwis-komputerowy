@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/oferty.css" />
+    <link rel="stylesheet" href="styles/suppliers.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -37,6 +38,8 @@
         </div>
     </div>
     <?php include './components/oferty.html' ?>
+    <br><br>
+    <?php include './components/suppliers.php' ?>
     <svg>
         <filter id='noiseFilter'>
             <feTurbulence
