@@ -106,7 +106,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 1em;
+    margin-top: 5em;
 }
 
 .field-email {
@@ -148,9 +148,9 @@ textarea {
 .submit {
     width: 91%;
     padding-left: 3em;
-    height: 25.7vh;
+    height: 15vh;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: right;
     overflow: hidden;
     position: relative;

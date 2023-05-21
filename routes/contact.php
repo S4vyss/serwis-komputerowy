@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body class="contact" style="overflow: hidden">
-    <?php include '../header.php' ?>
+    <?php include '../components/header.php' ?>
     <h1>Contact Us</h1>
     <main class="container-contact">
         <article class="contact-info">

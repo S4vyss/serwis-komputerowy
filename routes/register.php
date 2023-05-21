@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include '../header.php' ?>
+    <?php include '../components/header.php' ?>
     <div style="margin-bottom: 4em; flex-direction: column; justify-content: center" class="hero">
         <div class="container">
             <h2>Create User</h2>
