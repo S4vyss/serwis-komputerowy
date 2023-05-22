@@ -1,5 +1,5 @@
 <div class="nav">
-    <h2><a href="http://localhost:8080/serwis-komputerowy/index.php">Serwis KSMG</a></h2>
+    <h2><a href="/serwis-komputerowy/index.php">Serwis KSMG</a></h2>
     <div class="menu">
         <?php
             session_start();
@@ -35,7 +35,9 @@
 
             for ($i = 0; $i < count($specificRoute); $i++) {
                 if ($specificRoute[$i] !== $currentRoute) {
-                    echo "<a href='http://localhost:8080{$specificRoute[$i]}'>{$specificName[$i]}</a>";
+                    echo "<a style='border-bottom: 2px solid transparent;' href='{$specificRoute[$i]}'>{$specificName[$i]}</a>";
+                } else {
+                    echo "<a style='border-bottom: 2px solid black;' href='{$specificRoute[$i]}'>{$specificName[$i]}</a>";
                 }
             }
         ?>

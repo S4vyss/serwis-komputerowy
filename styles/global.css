@@ -1,15 +1,14 @@
 :root {
   --bg: #F8F9FB;
   --text: #151515;
-  --cyan: #c1eaee;
+  --cyan: #C1EED8;
   --dark-blue: #A7B9F1;
-  --light-blue: #2ACDFD;
+  --light-blue: #2beb1d;
 }
 
 
 body {
   height: fit-content;
-  margin: 0;
 
   display: flex;
   flex-direction: column;

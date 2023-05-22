@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="submit">
-                <input class="submit-btn" type="submit" value="Send Message" />
+                <input style="margin-bottom: 1rem" class="submit-btn" type="submit" value="Send Message" />
             </div>
         </form>
         <?php

@@ -1,0 +1,64 @@
+:root {
+    --hover: #EEFBFF;
+}
+
+.table {
+     width: 75%;
+     background-color: transparent;
+     border-collapse: collapse;
+     border-width: 0px;
+     color: #03AAEE;
+ }
+
+.table td, .table th {
+    border: none;
+    padding: .5rem;
+    font-size: 17px;
+}
+
+.table thead {
+    background-color: #162d50;
+    color: white!important;
+}
+
+.table th {
+    font-weight: lighter;
+}
+
+.table .content {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.content td {
+    padding: 1rem;
+}
+
+.table .content:hover {
+    background: var(--hover);
+}
+
+.content:hover .price {
+    color: var(--light-blue);
+}
+
+.price {
+    width: 15%;
+    text-align: left;
+    color: black;
+    transition: all .3s ease;
+}
+
+.title {
+    width: 85%;
+}
+
+.title::after {
+    content: '\2023';
+    margin-left: 10px;
+    transition: .2s all ease;
+}
+
+.content:hover .title::after {
+    margin-left: 15px;
+}
