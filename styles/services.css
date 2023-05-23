@@ -35,7 +35,7 @@
 }
 
 .table .content:hover {
-    background: var(--hover);
+    background: var(--hover)!important;
 }
 
 .content:hover .price {
@@ -56,9 +56,63 @@
 .title::after {
     content: '\2023';
     margin-left: 10px;
-    transition: .2s all ease;
+    transition: .2s margin-left ease;
 }
 
 .content:hover .title::after {
     margin-left: 15px;
+}
+
+.rotate::after {
+    transform: rotate(90deg);
+    display: inline-block;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-left: 15px;
+}
+
+.content:hover .rotate::after {
+    margin-left: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.content-hidden td {
+    padding: 1rem;
+}
+
+.content-hidden {
+    background: var(--hover);
+}
+
+.service-text {
+    color: #162D50;
+    width: 85%;
+}
+
+.submit-service {
+    width: 15%;
+}
+
+#content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+#content td {
+    padding: 1rem;
+}
+
+.submit-service-btn {
+    background: #162D50;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
 }

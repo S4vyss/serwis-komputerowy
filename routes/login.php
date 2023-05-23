@@ -41,6 +41,7 @@
                 if (password_verify($_password, $row['password'])) {
                     $_SESSION['email'] = $_email;
                     $_SESSION['username'] = $row['username'];
+                    $_SESSION['userId'] = $row['id'];
                     $_SESSION['isLogged'] = true;
 
                     echo "User logged";
