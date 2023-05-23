@@ -39,7 +39,7 @@
 }
 
 .content:hover .price {
-    color: var(--light-blue);
+    color: var(--light-blue)!important;
 }
 
 .price {

@@ -33,7 +33,7 @@
                 echo "
                         <tr id='contentHigher$i' class='content' onclick='toggleContent($i)'>
                           <td id='title$i' class='title'>{$row['title']}</td>
-                          <td class='price'>Od {$row['price']} zł</td>
+                          <td id='price$i' class='price'>Od {$row['price']} zł</td>
                         </tr>
                         <tr id='content$i' class='hidden content-hidden'>
                             <td class='service-text'>{$textService}</td>
@@ -62,14 +62,17 @@
         var content = document.getElementById("content" + index);
         const title = document.getElementById('title' + index);
         const contentHigher = document.getElementById('contentHigher' + index);
+        const price = document.getElementById('price' + index);
 
         content.classList.toggle("hidden");
         if (content.classList.contains("hidden")) {
             content.style.height = 0;
             contentHigher.style.background = "transparent";
+            price.style.color = "black";
         } else {
             content.style.height = content.scrollHeight + "px";
             contentHigher.style.background = "#EEFBFF";
+            price.style.color = "var(--light-blue)";
         }
         title.classList.toggle("rotate");
     }
