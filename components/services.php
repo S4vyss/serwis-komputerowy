@@ -13,7 +13,7 @@
         $request = mysqli_query($connection, $query);
 
         $textService = "You need to be logged to create an application";
-        $form = null;
+        $form = "<td></td>";
 
         if (isset($_SESSION['isLogged'])) {
             if ($_SESSION['isLogged']) {
@@ -37,7 +37,7 @@
                         </tr>
                         <tr id='content$i' class='hidden content-hidden'>
                             <td class='service-text'>{$textService}</td>
-                            <td>{$form}</td>
+                            {$form}
                         </tr>
                     ";
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

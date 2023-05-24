@@ -39,9 +39,21 @@
     list-style: none;
 }
 
+@media screen and (max-height: 750px) {
+    .supplier {
+        height: 90%;
+    }
+}
+
 .icon-supply {
     width: 55px;
     padding: 1.5rem 2rem 1.5rem 1.5rem;
+}
+
+@media screen and (max-height: 750px) {
+    .icon-supply {
+        padding-bottom: 0;
+    }
 }
 
 .inner {
