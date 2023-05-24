@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
-<body class="contact" style="overflow: hidden">
+<body class="contact" style="overflow-x: hidden">
     <?php include '../components/header.php' ?>
     <h1>Contact Us</h1>
     <main class="container-contact">
@@ -38,16 +38,16 @@
                     </div>
                     <div class="links">
                         <a href="https://github.com/S4vyss" target="_blank">
-                            <img src="../assets/github.svg" width="26" alt="link" />
+                            <img class="twitter" src="../assets/github.svg" width="26" alt="link" />
                         </a>
                         <a href="#">
-                            <img src="../assets/twitter.svg" width="26" alt="link" />
+                            <img class="twitter" src="../assets/twitter.svg" width="26" alt="link" />
                         </a>
                         <a href="#">
-                            <img src="../assets/linked.svg" width="24" alt="link" />
+                            <img class="linked" src="../assets/linked.svg" width="24" alt="link" />
                         </a>
                         <a href="#">
-                            <img src="../assets/fb.svg" width="16" alt="link" />
+                            <img class="fb" src="../assets/fb.svg" width="16" alt="link" />
                         </a>
                     </div>
                 </div>
