@@ -1,0 +1,124 @@
+#full-stars .rating-group {
+    display: inline-flex;
+}
+#full-stars .rating__icon {
+    pointer-events: none;
+}
+#full-stars .rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+#full-stars .rating__input--none {
+    display: none;
+}
+#full-stars .rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+#full-stars .rating__icon--star {
+    color: orange;
+    transition: all .3s ease;
+}
+#full-stars .rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #ddd;
+}
+#full-stars .rating-group:hover .rating__label .rating__icon--star {
+    color: orange;
+}
+#full-stars .rating__input:hover ~ .rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+.reviews {
+    width: 40%;
+    background: transparent;
+    background:
+            linear-gradient(to right, #151515 1px, transparent 1px) 0 0,
+            linear-gradient(to right, #151515 1px, transparent 1px) 0 100%,
+            linear-gradient(to left, #151515 1px, transparent 1px) 100% 0,
+            linear-gradient(to left, #151515 1px, transparent 1px) 100% 100%,
+            linear-gradient(to bottom, #151515 1px, transparent 1px) 0 0,
+            linear-gradient(to bottom, #151515 1px, transparent 1px) 100% 0,
+            linear-gradient(to top, #151515 1px, transparent 1px) 0 100%,
+            linear-gradient(to top, #151515 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.reviews h2 {
+    margin: 0;
+}
+
+.rating {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.write {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-review {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    background: #2F3D7E;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #f8e8e6;
+}
+
+.comment-div {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-comment {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.submit-comment input {
+    background: #2F3D7E;
+    color: #f8e8e6;
+    border: none;
+    outline: none;
+    padding: .8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 9px;
+    transition: all 0.2s ease;
+}
+
+.submit-comment input:hover {
+    background: #f8e8e6;
+    color: #2F3D7E;
+}
+
+.comment {
+    width: 68%;
+    resize: none;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    scrollbar-width: none;
+}

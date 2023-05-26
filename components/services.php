@@ -1,45 +1,43 @@
 <h1>Our Services</h1>
 <table id="table" class="table">
     <thead>
-        <tr>
-            <th style="text-align: left; padding-left: 1rem">Service</th>
-            <th style="text-align: left; padding-left: 1rem">Price</th>
-        </tr>
+    <tr>
+        <th style="text-align: left; padding-left: 1rem">Service</th>
+        <th style="text-align: left; padding-left: 1rem">Price</th>
+    </tr>
     </thead>
     <tbody>
-        <?php
-        $connection = mysqli_connect('127.0.0.1', 'root', '', 'serwis') or die;
-        $query = "SELECT * FROM services";
-        $request = mysqli_query($connection, $query);
+    <?php
+    $connection = mysqli_connect('127.0.0.1', 'root', '', 'serwis') or die;
+    $query = "SELECT * FROM services";
+    $request = mysqli_query($connection, $query);
 
-        $textService = "You need to be logged to create an application";
-        $form = "<td></td>";
+    $textService = "You need to be logged to create an application";
+    $form = null;
+    $submited = false;
 
-        if (isset($_SESSION['isLogged'])) {
-            if ($_SESSION['isLogged']) {
-                $textService = "Send an application for that service";
-                $form = "<td class='submit-service'>
-                                <form action='index.php#table' method='post'>
-                                    <input class='submit-service-btn' type='submit' name='submit_button' value='Send Application' />
-                                </form>
-                            </td>";
-            }
+    if (isset($_SESSION['isLogged'])) {
+        if ($_SESSION['isLogged']) {
+            $textService = "Send an application for that service";
+            $form = "<form onsubmit='{() => $submited = true;}' action='index.php#table' method='post'><input class='submit-service-btn' type='submit' name='submit_button' value='Send Application' /></form>";
         }
+    }
 
-        $i = 0;
+    $i = 0;
 
-        if ($request->num_rows > 0) {
-            while ($row = mysqli_fetch_assoc($request)) {
-                echo "
+    if ($request->num_rows > 0) {
+        while ($row = mysqli_fetch_assoc($request)) {
+            echo "
                         <tr id='contentHigher$i' class='content' onclick='toggleContent($i)'>
                           <td id='title$i' class='title'>{$row['title']}</td>
                           <td id='price$i' class='price'>Od {$row['price']} zł</td>
                         </tr>
                         <tr id='content$i' class='hidden content-hidden'>
                             <td class='service-text'>{$textService}</td>
-                            {$form}
+                            <td class='submit-service'>{$form}</td>
                         </tr>
                     ";
+            if ($submited) {
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if (isset($_POST['submit_button'])) {
                         $title = $row['title'];
@@ -47,13 +45,18 @@
 
                         $queryApplication = "INSERT INTO applications VALUES (NULL, '$title', '$userId')";
                         mysqli_query($connection, $queryApplication);
+                        echo "<script>alert('halo?')</script>";
                     }
                 }
-                $i++;
+            } else {
+                echo $submited;
             }
+
+            $i++;
         }
-        $connection->close();
-        ?>
+    }
+    $connection->close();
+    ?>
     </tbody>
 </table>
 <script>
