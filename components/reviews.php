@@ -2,11 +2,11 @@
 <form method="post" id="review" action="queries/review-query.php">
     <section class="reviews">
         <?php
-            if (isset($_SESSION['isLogged'])) {
-                if ($_SESSION['isLogged']) {
-                    $username = $_SESSION['username'];
-                    $initials = substr($username, 0, 2);
-                    echo '
+        if (isset($_SESSION['isLogged'])) {
+            if ($_SESSION['isLogged']) {
+                $username = $_SESSION['username'];
+                $initials = substr($username, 0, 2);
+                echo '
                         <div class="write">
                             <div class="rating">
                                 <div class="info-review">
@@ -30,21 +30,68 @@
                                 </div>
                             </div>
                             <div class="comment-div">
-                                <textarea name="comment" class="comment"></textarea>
+                                <textarea maxlength="255" name="comment" class="comment"></textarea>
                                 <div class="submit-comment">
                                     <input type="submit" value="Comment">
                                 </div>
                             </div>
                         </div>
                     ';
-                }
-            } else {
-                echo "<h2 style='text-align: center'>Login to post a review</h2>";
             }
+        } else {
+            echo "<h2 style='text-align: center'>Login to post a review</h2>";
+        }
         ?>
     </section>
 </form>
 <br><br>
 <section class="display-reviews">
+    <?php
+    $connection = mysqli_connect('127.0.0.1', 'root', '', 'serwis') or die;
+    $query = "SELECT * FROM reviews ORDER BY RAND() LIMIT 4";
+    $request = mysqli_query($connection, $query);
 
+    if ($request->num_rows > 0) {
+        $reviewIndex = 1; // Initialize a review index variable
+
+        while ($row = mysqli_fetch_assoc($request)) {
+            $query2 = "SELECT username FROM user WHERE id=\"" . $row['user_id'] . "\"";
+            $request2 = mysqli_query($connection, $query2);
+            $row2 = mysqli_fetch_assoc($request2);
+            $username = $row2['username'];
+            $initials = substr($username, 0, 2);
+            $comment = $row['comment'];
+
+            echo "
+            <article class='review'>
+                <div class='upper'>
+                    <div class='username-review'>
+                        <div class='img one'>$initials</div>
+                        <h3>$username</h3>
+                    </div>
+                    <div class='stars' id='full-stars-$reviewIndex'>
+                        <div class='rating-group' id='display-stars-$reviewIndex'>
+                ";
+                $rating = $row['rating'];
+                for ($i = 1; $i <= 5; $i++) {
+                    $checked = ($i <= $rating) ? 'checked' : '';
+                    echo "
+                                <label style='cursor: default' aria-label='$i star' class='rating__label' for='rating3-$reviewIndex-$i'><i class='rating__icon fa fa-star disable-hover'></i></label>
+                                <input class='rating__input' $checked name='rating3-$reviewIndex' id='rating3-$reviewIndex-$i' value='$i' type='radio'>
+                            ";
+                }
+                echo "
+                        </div>
+                    </div>
+                </div>
+                <div class='lower'>
+                    <p class='comment-displayed'>$comment</p>
+                </div>   
+            </article>
+            ";
+
+            $reviewIndex++; // Increment the review index
+        }
+    }
+    ?>
 </section>

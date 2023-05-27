@@ -1,32 +1,40 @@
-#full-stars .rating-group {
+.rating-group {
     display: inline-flex;
 }
-#full-stars .rating__icon {
+.rating__icon {
     pointer-events: none;
 }
-#full-stars .rating__input {
+.rating__input {
     position: absolute !important;
     left: -9999px !important;
 }
-#full-stars .rating__input--none {
+.rating__input--none {
     display: none;
 }
-#full-stars .rating__label {
+.rating__label {
     cursor: pointer;
     padding: 0 0.1em;
     font-size: 2rem;
 }
-#full-stars .rating__icon--star {
+.rating__icon--star {
     color: orange;
     transition: all .3s ease;
 }
-#full-stars .rating__input:checked ~ .rating__label .rating__icon--star {
+.rating__input:checked ~ .rating__label .rating__icon--star {
     color: #ddd;
 }
-#full-stars .rating-group:hover .rating__label .rating__icon--star {
+.rating-group:hover .rating__label .rating__icon--star {
     color: orange;
 }
-#full-stars .rating__input:hover ~ .rating__label .rating__icon--star {
+.rating__input:hover ~ .rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+.disable-hover {
+    color: orange;
+}
+
+.rating__input:checked ~ .rating__label .disable-hover {
     color: #ddd;
 }
 
@@ -125,4 +133,47 @@
 
 #review {
     width: 40%;
+}
+
+.display-reviews {
+    width: 75%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+    padding-top: 1rem;
+    border-radius: 9px;
+    width: 100%;
+}
+
+.username-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.upper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower {
+    width: 90%;
+    max-width: 500px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: left;
 }

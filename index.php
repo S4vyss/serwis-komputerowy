@@ -45,8 +45,18 @@
     <?php include './components/suppliers.php' ?>
     <br><br>
     <?php include './components/services.php' ?>
+    <div style="position: absolute; z-index: -2; left: 55%; top: 370%; transform: rotate(90deg)">
+        <div class="yellow2 blob2"></div>
+        <div class="red2 blob2"></div>
+        <div class="green2 blob2"></div>
+    </div>
     <br><br>
     <?php include './components/reviews.php' ?>
+    <div style="position: absolute; z-index: -2; left: 50%; top: 370%; transform: rotate(-90deg)">
+        <div class="yellow2 blob2"></div>
+        <div class="red2 blob2"></div>
+        <div class="green2 blob2"></div>
+    </div>
     <svg>
         <filter id='noiseFilter'>
             <feTurbulence
