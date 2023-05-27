@@ -14,19 +14,20 @@
 
     $textService = "You need to be logged to create an application";
     $form = null;
-    $submited = false;
-
-    if (isset($_SESSION['isLogged'])) {
-        if ($_SESSION['isLogged']) {
-            $textService = "Send an application for that service";
-            $form = "<form onsubmit='{() => $submited = true;}' action='index.php#table' method='post'><input class='submit-service-btn' type='submit' name='submit_button' value='Send Application' /></form>";
-        }
-    }
 
     $i = 0;
 
     if ($request->num_rows > 0) {
         while ($row = mysqli_fetch_assoc($request)) {
+            if (isset($_SESSION['isLogged'])) {
+                if ($_SESSION['isLogged']) {
+                    $textService = "Send an application for that service";
+                    $form = "<form action='queries/application-query.php' method='post'>
+                                  <input type='hidden' name='title' value='" . htmlspecialchars($row['title']) . "'>
+                                  <input class='submit-service-btn' type='submit' name='submit_button' value='Send Application' />
+                             </form>";
+                }
+            }
             echo "
                         <tr id='contentHigher$i' class='content' onclick='toggleContent($i)'>
                           <td id='title$i' class='title'>{$row['title']}</td>
@@ -37,21 +38,6 @@
                             <td class='submit-service'>{$form}</td>
                         </tr>
                     ";
-            if ($submited) {
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    if (isset($_POST['submit_button'])) {
-                        $title = $row['title'];
-                        $userId = $_SESSION['userId'];
-
-                        $queryApplication = "INSERT INTO applications VALUES (NULL, '$title', '$userId')";
-                        mysqli_query($connection, $queryApplication);
-                        echo "<script>alert('halo?')</script>";
-                    }
-                }
-            } else {
-                echo $submited;
-            }
-
             $i++;
         }
     }
