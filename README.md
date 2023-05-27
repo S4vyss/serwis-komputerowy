@@ -1,8 +1,6 @@
 # serwis-komputerowy
 School project 
 
-TODO: 
-- [x] Usługi (tabela z usługami)
-- [ ] Opinie (możliwość dodawania opinii oraz wyświetlanie opinii)
-- [x] Zgłoszenia (możliwość napisania zgłoszenia) chyba nie będę wyświetlał zgłoszeń tylko trzymał je w bazie
-- [ ] random .php (trzeba zrobić jakiś plik php w którym dopełni się zapytania, w sumie tam mogę wyświetlić zgłoszenia
+Po sklonowaniu należy wsadzić plik do htdocs i zmienić jego nazwę z **serwis-komputerowy-main** na **serwis-komputerowy**, to ważne
+bo inaczej nie będzie działać routing, co do bazy danych należy ją zahostować na phpmyadmin pod nazwą "serwis" z kodowaniem znaków
+utf8 general ci 
