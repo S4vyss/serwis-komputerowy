@@ -31,7 +31,7 @@
 }
 
 .reviews {
-    width: 40%;
+    width: 100%;
     background: transparent;
     background:
             linear-gradient(to right, #151515 1px, transparent 1px) 0 0,
@@ -121,4 +121,8 @@
     outline: none;
     padding: 10px;
     scrollbar-width: none;
+}
+
+#review {
+    width: 40%;
 }
