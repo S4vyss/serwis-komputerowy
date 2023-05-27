@@ -74,6 +74,13 @@
         <div class="green2 blob2"></div>
     </div>
 
+    <footer style="display: flex; width: 100%; justify-content: space-around; align-items: center">
+        <p>Made by Kacper Leśniewski 2pa</p>
+        <a style="border-bottom: 1px solid black; font-weight: 400; margin: 0; padding: 0" href="nerd.php">
+            Statystyki dla nerdów
+        </a>
+    </footer>
+
     <script>
         function logged() {
             return alert("You are logged already");
